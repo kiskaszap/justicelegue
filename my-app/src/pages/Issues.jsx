@@ -9,3 +9,4 @@ const Issues = () => {
 };
 
 export default Issues;
+// add, commit, push, open pull request
