@@ -11,3 +11,33 @@
 	text-decoration: none;
 	margin-right: 2vw;
 }
+
+
+/* what is git */
+body{
+	background-color: #0A3A40;
+}
+
+.wig{
+	background-color:#0A3A40 ;
+}
+
+.wig-heading{
+text-align: center;
+color: antiquewhite;
+text-decoration: underline;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wig-text-holder{
+background-color: #1D7373;
+height: 400px;
+width: 80%;
+text-align:left;
+margin-left: 10%;
+margin-right: 10%;
+color: antiquewhite;
+font-size: 1.5rem;
+}
+
+
