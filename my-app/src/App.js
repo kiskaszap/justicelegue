@@ -8,12 +8,13 @@ import Origin from './pages/Origin';
 import Repository from './pages/Repository';
 import Whatisgit from './pages/Whatisgit';
 import React from 'react';
+import Navbar from './components/Navbar';
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Nopage />}>
+				<Route path="/" element={<Navbar />}>
 					<Route
 						index
 						element={<Home />}
