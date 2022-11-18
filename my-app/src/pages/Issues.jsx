@@ -1,7 +1,12 @@
 import React from 'react';
 
 const Issues = () => {
-	return <div>Issues</div>;
+	return (
+		<div>
+			<h1>What kind of issues are with Git?</h1>
+		</div>
+	);
 };
 
 export default Issues;
+// add, commit, push, open pull request
