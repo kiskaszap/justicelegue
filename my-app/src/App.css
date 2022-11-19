@@ -1,3 +1,5 @@
+/* nav bar */
+
 .linkContainer {
 	width: 100vw;
 	height: 8vh;
@@ -13,9 +15,28 @@
 }
 
 
+.links:before{
+	bottom:-1px;
+	right:-1px;
+	border-bottom:5px solid black;
+	border-right:5px solid black;
+}
+.links:hover{
+	border-top-right-radius:0px;
+border-bottom-left-radius:0px;
+	 background:rgba(0,0,0,.5);
+	 color:rgb(204, 93, 2);
+}
+
+
 /* what is git */
 body{
+	
 	background-color: #0A3A40;
+opacity: 0.8;
+background-image:  linear-gradient(30deg, #012626 12%, transparent 12.5%, transparent 87%, #012626 87.5%, #012626), linear-gradient(150deg, #012626 12%, transparent 12.5%, transparent 87%, #012626 87.5%, #012626), linear-gradient(30deg, #012626 12%, transparent 12.5%, transparent 87%, #012626 87.5%, #012626), linear-gradient(150deg, #012626 12%, transparent 12.5%, transparent 87%, #012626 87.5%, #012626), linear-gradient(60deg, #01262677 25%, transparent 25.5%, transparent 75%, #01262677 75%, #01262677), linear-gradient(60deg, #01262677 25%, transparent 25.5%, transparent 75%, #01262677 75%, #01262677);
+background-size: 20px 35px;
+background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
 }
 
 .wig{
@@ -41,3 +62,44 @@ font-size: 1.5rem;
 }
 
 
+/* origin */
+
+
+
+.origin-heading{
+text-align: center;
+color: antiquewhite;
+text-decoration: underline;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.origin-text-holder{
+background-color: #1D7373;
+height: 400px;
+width: 80%;
+text-align:left;
+margin-left: 10%;
+margin-right: 10%;
+color: antiquewhite;
+font-size: 1.5rem;
+}
+
+/* issues */
+
+.issues-heading{
+	text-align: center;
+	color: antiquewhite;
+	text-decoration: underline;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+	
+	.issues-text-holder{
+	background-color: #1D7373;
+	height: 400px;
+	width: 80%;
+	text-align:left;
+	margin-left: 10%;
+	margin-right: 10%;
+	color: antiquewhite;
+	font-size: 1.5rem;
+	}
