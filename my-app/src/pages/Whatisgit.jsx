@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Whatisgit = () => {
-	return <div>
+	return <div className='whatGit'>
 		 
-		<h1 className='wig-heading'>What Is Git</h1>
+		<h1 className='wig-heading'>WHAT IS GIT?</h1>
 		<div className='wig-text-holder'>
 			<p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 

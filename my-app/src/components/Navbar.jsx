@@ -12,13 +12,19 @@ const Navbar = () => {
 					>
 						Home{' '}
 					</Link>
-
 					<Link
 						className="links"
-						to="issues"
+						to="whatisgit"
 					>
-						Issues{' '}
+						What is Git?{' '}
 					</Link>
+					<Link
+						className="links"
+						to="repository"
+					>
+						Repositories{' '}
+					</Link>
+
 					<Link
 						className="links"
 						to="branches"
@@ -29,20 +35,16 @@ const Navbar = () => {
 						className="links"
 						to="origin"
 					>
-						Origin{' '}
+						Origin/ Master{' '}
 					</Link>
+	
 					<Link
 						className="links"
-						to="repository"
+						to="issues"
 					>
-						Repository{' '}
+						Issues{' '}
 					</Link>
-					<Link
-						className="links"
-						to="whatisgit"
-					>
-						What is git{' '}
-					</Link>
+		
 				</div>
 			</nav>
 			<Outlet />
