@@ -9,9 +9,11 @@ import Repository from './pages/Repository';
 import Whatisgit from './pages/Whatisgit';
 import React from 'react';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
 	return (
+		 <div className='app'>
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Navbar />}>
@@ -54,7 +56,9 @@ function App() {
 				</Route>
 			</Routes>
 		</BrowserRouter>
-		
+            <Footer />
+
+		</div>
 	);
 	
 	

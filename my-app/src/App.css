@@ -73,3 +73,14 @@ body{
 }
 
 
+footer {
+	position: fixed;
+	background-color: #262626;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 8px;
+	text-align: center;
+	color:rgb(204, 93, 2);
+	border-top: 1px solid #ff6550;
+  }
