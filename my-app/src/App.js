@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 import BestPractice from './pages/BestPractice';
 import Branches from './pages/Branches';
-import Home from './pages/Home';
 import Issues from './pages/Issues';
 import Origin from './pages/Origin';
 import Repository from './pages/Repository';
@@ -54,7 +54,10 @@ function App() {
 				</Route>
 			</Routes>
 		</BrowserRouter>
+		
 	);
+	
+	
 }
 
 export default App;
