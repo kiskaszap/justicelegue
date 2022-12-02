@@ -1,4 +1,4 @@
-import { React, Component, useState } from 'react';
+import { React, useState} from 'react';
 import Lightbox from "yet-another-react-lightbox";
 import PhotoAlbum from "react-photo-album";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
@@ -15,8 +15,8 @@ import './Repository.css';
 function Repository() {
 
 
-		const [setOpen] = useState(false);
-		const [index] = useState(0);
+		let [setClose, setOpen] = useState(false);
+		let [index, setIndex] = useState(-1);
 
 		// https://codesandbox.io/s/yet-another-react-lightbox-examples-9qvmif?file=/src/examples/PhotoGallery.js&initialpath=/plugins/captions
 
@@ -34,9 +34,13 @@ function Repository() {
 			{ id: 11, src: require("../images/git11.png"), alt: "", caption: "" }
 		]
 
-		function showimage(index) {
-			// Having problems here updating the state variables
+		function ShowImage(e)
+		{
+			e.preventDefault();
+			console.log("Hello World!");
+			setOpen(true);
 		}
+		
 
 		// Main gallery function to show on page load
 		function Gallery() {
@@ -47,7 +51,7 @@ function Repository() {
 						<section className='Gallery'>
 							{images.map((image) => // Here we map the images array above into renderable html 
 								<figure>
-									<a href="#" onClick={showimage}><img src={image.src} alt={image.alt} /></a>
+									<a href="#" onClick={ShowImage}><img src={image.src} alt={image.alt} /></a>
 									<figcaption>{image.caption}</figcaption>
 								</figure>
 							)}
@@ -61,7 +65,7 @@ function Repository() {
 
 
 		<Lightbox
-			open={index => 0}
+			open={setOpen}
 			index={index}
 			close={() => setOpen(false)}
 			slides={[
