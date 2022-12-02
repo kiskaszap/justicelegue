@@ -15,8 +15,8 @@ import './Repository.css';
 function Repository() {
 
 
-		let [setClose, setOpen] = useState(false);
-		let [index, setIndex] = useState(-1);
+		const [open, setOpen] = useState(false);
+		const [index, setIndex] = useState(-1);
 
 		// https://codesandbox.io/s/yet-another-react-lightbox-examples-9qvmif?file=/src/examples/PhotoGallery.js&initialpath=/plugins/captions
 
@@ -34,13 +34,6 @@ function Repository() {
 			{ id: 11, src: require("../images/git11.png"), alt: "", caption: "" }
 		]
 
-		function ShowImage(e)
-		{
-			e.preventDefault();
-			console.log("Hello World!");
-			setOpen(true);
-		}
-		
 
 		// Main gallery function to show on page load
 		function Gallery() {
@@ -51,7 +44,7 @@ function Repository() {
 						<section className='Gallery'>
 							{images.map((image) => // Here we map the images array above into renderable html 
 								<figure>
-									<a href="#" onClick={ShowImage}><img src={image.src} alt={image.alt} /></a>
+									<a href="#" onClick={setOpen(true)}><img src={image.src} alt={image.alt} /></a>
 									<figcaption>{image.caption}</figcaption>
 								</figure>
 							)}
@@ -62,10 +55,11 @@ function Repository() {
 		}
 
 
-
-
+		return(
+		<>
+		<Gallery />
 		<Lightbox
-			open={setOpen}
+			open={index => 0}
 			index={index}
 			close={() => setOpen(false)}
 			slides={[
@@ -87,11 +81,9 @@ function Repository() {
 				{ src: require("../images/git11.png") },
 			]} plugins={[Captions, Thumbnails]}>
 		</Lightbox>
-
-
-		return (
-			<Gallery></Gallery>
+		</>
 		)
+		
 		}
 	
 
