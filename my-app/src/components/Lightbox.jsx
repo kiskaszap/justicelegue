@@ -8,7 +8,7 @@ function LightboxTest(props) {
     const [index, setIndex] = useState(-1);
 
     <Lightbox
-        open={index => 0}
+        open={open}
         index={index}
         close={() => setOpen(false)}
         slides={[
