@@ -16,5 +16,18 @@ img {
     gap: 1em;
 }
 
+a { 
+    cursor: pointer;
+}
+
+.yarl__slide_title { 
+    font-size: xx-large !important;
+}
+
+.yarl__slide_description
+{
+    font-size: x-large !important;
+}
+
 
 /* End code for lightbox */
