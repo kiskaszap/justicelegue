@@ -9,7 +9,9 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import './Repository.css';
 
 
-function Repository() {
+
+
+const Repository = (props) => {
 	const [open, setOpen] = React.useState(false);
 	const [index, setIndex] = React.useState(-1);
 
@@ -30,49 +32,43 @@ function Repository() {
 
 	// https://codesandbox.io/s/yet-another-react-lightbox-examples-9qvmif?file=/src/examples/PhotoGallery.js&initialpath=/plugins/captions
 
-	
 	return (
+		
 		<>
-		<div className='whatGit'>
-
-			<h1 className='wig-heading'>Repository</h1>
-			<div className='wig-text-holder'>
-				<section className='Gallery'>
-					<figure>
-						<img src={require("../images/git1.png")} />
-						<a onClick={() => setIndex(1)}><figcaption>Github is awesome!</figcaption></a>
-					</figure>
-				</section>
+			<div className='whatGit'>
+				<h1 className='wig-heading'>Repository</h1>
+				<div className='wig-text-holder'>
+					<button onClick={() => setIndex(1)}>Open Lightbox</button>
+				</div>
 			</div>
-
 			<Lightbox
-				open={open}
-				close={() => setOpen(false)}
-				index={index}
-				slides={[
-					{
-						src: require("../images/git1.png"),
-						title: "Github is awesomme",
-						description: "Lorem ipsum....",
-					},
-					{ src: require("../images/git2.png") },
-					{ src: require("../images/git3.png") },
-					{ src: require("../images/git3.png") },
-					{ src: require("../images/git4.png") },
-					{ src: require("../images/git5.png") },
-					{ src: require("../images/git6.png") },
-					{ src: require("../images/git7.png") },
-					{ src: require("../images/git8.png") },
-					{ src: require("../images/git9.png") },
-					{ src: require("../images/git10.png") },
-					{ src: require("../images/git11.png") },
-				]}
-				plugins={[Captions]}>
-			</Lightbox>
-		</div>
+        open={index >= 0}
+		index={index}
+        close={() => setOpen(false)}
+        slides={[
+            {
+                src: require("../images/git1.png"),
+                title: "Github is awesomme",
+                description: "Lorem ipsum....",
+            },
+            { src: require("../images/git2.png") },
+            { src: require("../images/git3.png") },
+            { src: require("../images/git3.png") },
+            { src: require("../images/git4.png") },
+            { src: require("../images/git5.png") },
+            { src: require("../images/git6.png") },
+            { src: require("../images/git7.png") },
+            { src: require("../images/git8.png") },
+            { src: require("../images/git9.png") },
+            { src: require("../images/git10.png") },
+            { src: require("../images/git11.png") },
+        ]} plugins={[Captions, Thumbnails]}>
+    </Lightbox>
 		</>
 	)
 }
+
+
 
 
 export default Repository;
